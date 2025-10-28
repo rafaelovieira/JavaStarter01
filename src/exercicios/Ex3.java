@@ -2,28 +2,21 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex3 {
+public class ex03 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero1 = input.nextInt();
 
-          /*
-        Faça um programa que ler dois números e exibe o maior número
-         */
+        System.out.println("Digite um segundo número: ");
+        int numero2 = input.nextInt();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite o primeiro número: ");
-        double num1 = sc.nextDouble();
-
-        System.out.print("Digite o segundo número: ");
-        double num2 = sc.nextDouble();
-
-        if (num1 > num2) {
-            System.out.println("O maior número é: " + num1);
-        } else if (num2 > num1) {
-            System.out.println("O maior número é: " + num2);
+        if (numero1 > numero2) {
+            System.out.println("Entre os dois números digitados, " + numero1 + " é o maior deles.");
+        } else if (numero2 > numero1) {
+            System.out.println("Entre os dois números digitados, " + numero2 + " é o maior deles.");
         } else {
-            System.out.println("Os dois números são iguais!");
+            System.out.println("Inválido. Digite dois números diferentes!");
         }
-
     }
 }

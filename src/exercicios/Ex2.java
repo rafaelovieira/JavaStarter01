@@ -2,15 +2,17 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex2 {
+public class ex02 {
     public static void main(String[] args) {
-        /*Faça um programa que lê dois números e exibe a soma dos números informados*/
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero1 = input.nextInt();
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o primeiro número: ");
-        int n1 = sc.nextInt();
-        System.out.print("Digite o segundo número: ");
-        int n2 = sc.nextInt();
-        System.out.println("A soma é: " + (n1 + n2));
+        System.out.println("Digite um segundo número: ");
+        int numero2 = input.nextInt();
+
+        int soma = numero1 + numero2;
+
+        System.out.println("Você digitou os números: " + numero1 + " e " + numero2 + ". A soma deles é: " + soma);
     }
 }

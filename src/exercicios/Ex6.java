@@ -2,14 +2,14 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex6 {
+public class ex06 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite a sua idade: ");
+        int idadeAnos = input.nextInt();
 
-        /*Converter idade em meses*/
-            Scanner sc = new Scanner(System.in);
-            System.out.print("Digite sua idade: ");
-            int idade = sc.nextInt();
-            System.out.println("Você tem " + (idade * 12) + " meses de vida.");
+        int idadeMeses = idadeAnos * 12;
 
+        System.out.println("A sua idade corresponde a " + idadeMeses + " meses!");
     }
 }

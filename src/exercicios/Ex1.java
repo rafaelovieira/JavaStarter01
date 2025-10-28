@@ -2,24 +2,15 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex1 {
-
+public class ex01 {
     public static void main(String[] args) {
-
-    /*
-    Crie um programa que leia um número e mostre o dobro e o triplo dele.
-    * */
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite um número: ");
-        int numero = sc.nextInt();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero = input.nextInt();
 
         int dobro = numero * 2;
         int triplo = numero * 3;
 
-        System.out.println("O dobro de " + numero + " é: " + dobro);
-        System.out.println("O triplo de " + numero + " é: " + triplo);
+        System.out.println("O número digitado foi: " + numero + ", o dobro desse número é: " + dobro + " e o triplo é: " + triplo);
     }
-
 }

@@ -2,21 +2,14 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex7 {
+public class ex07 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero = input.nextInt();
 
-        /*
-        Programa que receba um número e faça o decremento do valor e exiba o resultado.
-        */
+        numero--;
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite um número: ");
-        int numero = sc.nextInt();
-
-        numero--; // decrementa 1 do valor digitado
-
-        System.out.println("Após o decremento, o valor é: " + numero);
-
+        System.out.println("O decremento do número digitado é: " + numero);
     }
 }

@@ -2,23 +2,17 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex9 {
+public class ex09 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite o primeiro número: ");
+        int numero1 = input.nextInt();
 
-        /*
-        Programa que lê dois número, a primeira entrada precisa ser multiplicado com o valor informando na segunda entrada.
-        */
+        System.out.println("Digite o segundo número: ");
+        int numero2 = input.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+        numero1 *= numero2;
 
-        System.out.print("Digite o primeiro número: ");
-        int numero1 = sc.nextInt();
-
-        System.out.print("Digite o valor para multiplicar: ");
-        int numero2 = sc.nextInt();
-
-        numero1 *= numero2; // multiplica o primeiro número pelo segundo
-
-        System.out.println("O resultado é: " + numero1);
+        System.out.println("O valor multiplicado é  " + numero1);
     }
 }

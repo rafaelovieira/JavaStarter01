@@ -1,43 +1,39 @@
 package exercicios;
 
+import java.util.Locale;
 import java.util.Scanner;
 
-public class Ex13 {
+public class ex13 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Programa que lê o dia da semana (terca/quarta/quinta) e diga se é o primeiro dia da semana, segundo dia, terceiro dia
-        */
+        System.out.println("Digite o nome do dia da semana: ");
+        String semana = input.nextLine().toLowerCase();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite o dia da semana (segunda, terca, quarta, quinta, sexta, sabado, domingo): ");
-        String dia = sc.nextLine().toLowerCase(); // converte para minúsculo
-
-        switch (dia) {
-            case "segunda":
-                System.out.println("Primeiro dia da semana útil.");
+        switch (semana) {
+            case "domingo":
+                System.out.println("Domingo é o primeiro dia da semana!");
                 break;
-            case "terca":
-                System.out.println("Segundo dia da semana útil.");
+            case "segunda":
+                System.out.println("Segunda-feira é o segundo dia da semana!");
+                break;
+            case "terça":
+                System.out.println("Terça-feira é o terceiro dia da semana!");
                 break;
             case "quarta":
-                System.out.println("Terceiro dia da semana útil.");
+                System.out.println("Quarta-feira é o quarto dia da semana!");
                 break;
             case "quinta":
-                System.out.println("Quarto dia da semana útil.");
+                System.out.println("Quinta-feira é o quinto dia da semana!");
                 break;
             case "sexta":
-                System.out.println("Quinto dia da semana útil.");
+                System.out.println("Sexta-feira é o sexto dia da semana!");
                 break;
             case "sabado":
-                System.out.println("Fim de semana - sexto dia.");
-                break;
-            case "domingo":
-                System.out.println("Fim de semana - sétimo dia.");
+                System.out.println("Sábado é o sétimo dia da semana!");
                 break;
             default:
-                System.out.println("Dia inválido. Tente novamente.");
+                System.out.println("Digite um dia da semana válido!");
         }
     }
 }

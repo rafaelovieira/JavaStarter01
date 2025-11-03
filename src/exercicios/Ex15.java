@@ -2,60 +2,64 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex15 {
+public class ex15 {
     public static void main(String[] args) {
-        /*
-        Faça um programa que seja o cardápio de um restaurante, o usuário
-        escolhe o produto e ao final mostre o total do pedido.
-        */
+        Scanner input = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("=====================================");
+        System.out.println("[1] - Pizza de Java..........R$ 59,99");
+        System.out.println("[2] - Pizza de Python........R$ 54,99");
+        System.out.println("[3] - Pizza de C#............R$ 34,99");
+        System.out.println("[4] - Pizza de JavaScript....R$ 39,99");
+        System.out.println("[5] - Pizza de GO............R$ 44,99");
+        System.out.println("[6] - Pizza de SQL...........R$ 49,99");
+        System.out.println("[7] - Pizza de PHP...........R$ 29,99");
+        System.out.println("[8] - Finalizar pedido");
+        System.out.println("[9] - Sair");
+        System.out.println("=====================================");
+        System.out.println("Escolha o sabor da sua pizza:");
 
-        System.out.println("===== CARDÁPIO DIGITAL =====");
-        System.out.println("1 - Hambúrguer ........ R$ 25,00");
-        System.out.println("2 - Pizza ............. R$ 40,00");
-        System.out.println("3 - Salada ............ R$ 18,00");
-        System.out.println("4 - Suco Natural ...... R$ 10,00");
-        System.out.println("5 - Refrigerante ...... R$ 8,00");
-        System.out.println("6 - Finalizar pedido");
-        System.out.println("============================");
+        int opcao = input.nextInt();
+        double valorTotal = 0;
 
-        double total = 0;
-        int opcao;
-
-            System.out.print("Escolha uma opção: ");
-            opcao = sc.nextInt();
-
-            switch (opcao) {
-                case 1:
-                    System.out.println("Você escolheu: Hambúrguer 🍔");
-                    total += 25.00;
-                    break;
-                case 2:
-                    System.out.println("Você escolheu: Pizza 🍕");
-                    total += 40.00;
-                    break;
-                case 3:
-                    System.out.println("Você escolheu: Salada 🥗");
-                    total += 18.00;
-                    break;
-                case 4:
-                    System.out.println("Você escolheu: Suco Natural 🥤");
-                    total += 10.00;
-                    break;
-                case 5:
-                    System.out.println("Você escolheu: Refrigerante 🧃");
-                    total += 8.00;
-                    break;
-                case 6:
-                    System.out.println("Finalizando pedido...");
-                    break;
-                default:
-                    System.out.println("Opção inválida! Tente novamente.");
-            }
-
-        System.out.println("============================");
-        System.out.printf("Total do pedido: R$ %.2f%n", total);
-        System.out.println("Obrigado pela preferência! 😊");
+        switch (opcao) {
+            case 1:
+                System.out.println("Sabor escolhido: Pizza de Java");
+                valorTotal += 59.99;
+                break;
+            case 2:
+                System.out.println("Sabor escolhido: Pizza de Python");
+                valorTotal += 54.99;
+                break;
+            case 3:
+                System.out.println("Sabor escolhido: Pizza de C#");
+                valorTotal += 34.99;
+                break;
+            case 4:
+                System.out.println("Sabor escolhido: Pizza de JavaScript");
+                valorTotal += 39.99;
+                break;
+            case 5:
+                System.out.println("Sabor escolhido: Pizza de GO");
+                valorTotal += 44.99;
+                break;
+            case 6:
+                System.out.println("Sabor escolhido: Pizza de SQL");
+                valorTotal += 49.99;
+                break;
+            case 7:
+                System.out.println("Sabor escolhido: Pizza de PHP");
+                valorTotal += 29.99;
+                break;
+            case 8:
+                System.out.println("Favor aguarde, estamos processando o seu pedido");
+                break;
+            case 9:
+                System.out.println("Deseja realmente sair?");
+                break;
+            default:
+                System.out.println("Opção inválida, favor verificar sabores disponíveis.");
+        }
+        System.out.println("Valor total: R$ " + valorTotal);
     }
 }

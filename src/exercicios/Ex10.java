@@ -2,24 +2,19 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex10 {
+public class ex10 {
     public static void main(String[] args) {
-        /*
-        Programa que lê um número e diga se é positivo ou negativo.
-        */
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite um número: ");
-        double numero = sc.nextDouble();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero = input.nextInt();
 
         if (numero > 0) {
-            System.out.println("O número é positivo.");
+            System.out.println("O número digitado é positivo!");
         } else if (numero < 0) {
-            System.out.println("O número é negativo.");
+            System.out.println("O número digitado é negativo!");
         } else {
-            System.out.println("O número é zero.");
+            System.out.println("Digite um número diferente de zero!");
         }
-
     }
 }
+

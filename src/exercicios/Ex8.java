@@ -2,23 +2,17 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex8 {
+public class ex08 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite um número: ");
+        int numero1 = input.nextInt();
 
-        /*
-        Programa que leia dois número, a primeira entrada precisa ser incrementado com o valor informando na segunda entrada
-        */
+        System.out.println("Digite um segundo número: ");
+        int numero2 = input.nextInt();
 
-        Scanner sc = new Scanner(System.in);
+        numero1 += numero2;
 
-        System.out.print("Digite o primeiro número: ");
-        int numero1 = sc.nextInt();
-
-        System.out.print("Digite o valor a incrementar: ");
-        int incremento = sc.nextInt();
-
-        numero1 += incremento; // incrementa o primeiro número pelo valor informado
-
-        System.out.println("O novo valor é: " + numero1);
+        System.out.println("O valor incrementado é " + numero1);
     }
 }

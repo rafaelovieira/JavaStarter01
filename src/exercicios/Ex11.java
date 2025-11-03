@@ -2,21 +2,16 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex11 {
+public class ex11 {
     public static void main(String[] args) {
-        /*
-        Programa que lê uma idade e diga se é maior de idade ou menor de idade
-        */
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite a sua idade: ");
+        int idade = input.nextInt();
 
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Digite a idade: ");
-            int idade = sc.nextInt();
-            if (idade >= 18) {
-                System.out.println("Maior de idade");
-            } else {
-                System.out.println("Menor de idade");
-            }
-            sc.close();
-
+        if (idade >= 18) {
+            System.out.println("Você é maior de idade!");
+        } else {
+            System.out.println("Você é menor de idade!");
+        }
     }
 }

@@ -2,37 +2,28 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex12 {
+public class ex12 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Programa que lê 4 notas, calcula a média do aluno e diga se ele está aprovado ou reprovado, neste caso a
-        média precisa ser 7 para ser aprovado
-        */
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite sua 1º nota: ");
+        double nota1 = input.nextDouble();
 
-        System.out.print("Digite a 1ª nota: ");
-        double nota1 = sc.nextDouble();
+        System.out.println("Digite sua 2º nota: ");
+        double nota2 = input.nextDouble();
 
-        System.out.print("Digite a 2ª nota: ");
-        double nota2 = sc.nextDouble();
+        System.out.println("Digite sua 3º nota: ");
+        double nota3 = input.nextDouble();
 
-        System.out.print("Digite a 3ª nota: ");
-        double nota3 = sc.nextDouble();
-
-        System.out.print("Digite a 4ª nota: ");
-        double nota4 = sc.nextDouble();
+        System.out.println("Digite sua 4º nota: ");
+        double nota4 = input.nextDouble();
 
         double media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-        System.out.println("Média: " + media);
-
         if (media >= 7) {
-            System.out.println("Aluno aprovado! 🎉");
+            System.out.println("Você está aprovado, sua média foi " + media);
         } else {
-            System.out.println("Aluno reprovado! 😞");
+            System.out.println("Você foi reprovado, sua média foi " + media);
         }
-
-
     }
 }

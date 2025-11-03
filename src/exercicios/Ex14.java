@@ -2,24 +2,19 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex14 {
+public class ex14 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Programa que lê um número e diga qual é o mês referente a este número.
-        */
+        System.out.println("Digite um número referente a um mês: ");
+        int numeroMes = input.nextInt();
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Digite um número de 1 a 12: ");
-        int numero = sc.nextInt();
-
-        switch (numero) {
+        switch(numeroMes) {
             case 1:
                 System.out.println("Janeiro");
                 break;
             case 2:
-                System.out.println("Fevereiro");
+                System.out.println("Feveiro");
                 break;
             case 3:
                 System.out.println("Março");
@@ -52,9 +47,8 @@ public class Ex14 {
                 System.out.println("Dezembro");
                 break;
             default:
-                System.out.println("Número inválido! Digite um valor entre 1 e 12.");
+                System.out.println("Digite um número de mês válido!");
         }
-
-
     }
 }
+

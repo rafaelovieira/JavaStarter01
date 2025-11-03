@@ -2,46 +2,35 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex16 {
+public class ex16 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Programa que faça a leitura de um formulario de cadastro de pessoas, e a partir das respostas,
-        diga qual é o sexo da pessoa, se é maior ou menor de idade.
-        */
+        System.out.println("REALIZE O SEU CADASTRO ABAIXO");
+        System.out.println("Digite o seu nome: ");
+        String nome = input.nextLine();
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite o seu sobrenome: ");
+        String sobrenome = input.nextLine();
 
-        System.out.println("===== FORMULÁRIO DE CADASTRO =====");
+        System.out.println("Qual o seu gênero?");
+        String genero = input.nextLine();
 
-        System.out.print("Digite seu nome: ");
-        String nome = sc.nextLine();
+        System.out.println("Qual a sua idade?");
+        int idade = input.nextInt();
 
-        System.out.print("Digite sua idade: ");
-        int idade = sc.nextInt();
-
-        sc.nextLine(); // limpa o buffer do teclado
-
-        System.out.print("Digite seu sexo (M/F): ");
-        String sexo = sc.nextLine().toUpperCase();
-
-        System.out.println("\n===== RESULTADO DO CADASTRO =====");
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade + " anos");
-
-        if (sexo.equals("M")) {
-            System.out.println("Sexo: Masculino");
-        } else if (sexo.equals("F")) {
-            System.out.println("Sexo: Feminino");
-        } else {
-            System.out.println("Sexo: Não informado corretamente");
-        }
+        System.out.println("Crie uma senha de 6 dígitos: ");
+        String senha = input.nextLine();
 
         if (idade >= 18) {
-            System.out.println("Situação: Maior de idade");
+            System.out.println("Você é maior de idade e o seu cadastro foi realizado com sucesso!");
+            System.out.println("Nome completo: " + nome + " " + sobrenome);
+            System.out.println("Gênero: " + genero);
+            System.out.println("Idade: " + idade + " anos");
+            System.out.println("Usuário: " + nome.toLowerCase() + sobrenome.toLowerCase());
+            System.out.println("Senha: ******");
         } else {
-            System.out.println("Situação: Menor de idade");
+            System.out.println("Você é menor de idade e não pode se cadastrar na plataforma!");
         }
-
     }
 }

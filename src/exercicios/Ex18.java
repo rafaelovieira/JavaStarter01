@@ -2,52 +2,100 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex18 {
+public class ex18 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Criar um programa em Java que simule um menu de autoatendimento para uma clínica médica,
-        onde o paciente pode escolher uma das opções do menu digitando um número.
+        System.out.println("\nOlá, eu sou a atendente virtual da Clínica Médica e vou ajudar você nesse atendimento.\n");
+        System.out.println("[1] Agendamentos");
+        System.out.println("[2] Resultados");
+        System.out.println("[3] Encerrar");
+        System.out.println("Escolha uma das opções acima para prosseguirmos: ");
+        int opcaoMenu = input.nextInt();
 
-           ==== MENU CLÍNICA SAÚDE TOTAL ====
-            1 - Agendar consulta
-            2 - Cancelar consulta
-            3 - Verificar resultados de exames
-            4 - Falar com atendente
-            5 - Sair
-        */
-        Scanner sc = new Scanner(System.in);
-        int opcao;
+        if (opcaoMenu == 1) {
+            System.out.println("\n=== MENU AGENDAMENTOS ===");
+            System.out.println("[1] Agendar Consulta");
+            System.out.println("[2] Agendar Exame");
+            System.out.println("Digite uma opção: ");
+            int opcaoAgendamento = input.nextInt();
 
-        System.out.println("==== MENU CLÍNICA SAÚDE TOTAL ====");
-        System.out.println("1 - Agendar consulta");
-        System.out.println("2 - Cancelar consulta");
-        System.out.println("3 - Verificar resultados de exames");
-        System.out.println("4 - Falar com atendente");
-        System.out.println("5 - Sair");
-        System.out.print("Escolha uma opção: ");
-        opcao = sc.nextInt();
+            if (opcaoAgendamento == 1) {
+                System.out.println("\n=== AGENDAMENTO DE CONSULTAS ===");
+                System.out.println("[1] Cardiologista");
+                System.out.println("[2] Nutricionista");
+                System.out.println("[3] Ortopedista");
+                System.out.println("Escolha a especialidade para a consulta: ");
+                int opcaoEspecialidade = input.nextInt();
 
-        switch (opcao) {
-            case 1:
-                System.out.println("Você escolheu: Agendar consulta");
-                break;
-            case 2:
-                System.out.println("Você escolheu: Cancelar consulta");
-                break;
-            case 3:
-                System.out.println("Você escolheu: Verificar resultados de exames");
-                break;
-            case 4:
-                System.out.println("Você escolheu: Falar com atendente");
-                break;
-            case 5:
-                System.out.println("Encerrando o sistema... Obrigado por usar a Clínica Saúde Total!");
-                break;
-            default:
-                System.out.println("Opção inválida. Tente novamente.");
+                switch (opcaoEspecialidade) {
+                    case 1:
+                        System.out.println("✅ A sua consulta com o Dr Cardiologista foi marcada.");
+                        break;
+                    case 2:
+                        System.out.println("✅ A sua consulta com o Dr Nutricionista foi marcada.");
+                        break;
+                    case 3:
+                        System.out.println("✅ A sua consulta com o Dr Ortopedista foi marcada.");
+                        break;
+                    default:
+                        System.out.println("❌ Especialidade não encontrada, escolha uma das opções acima.");
+                }
+
+            } else if (opcaoAgendamento == 2) {
+                System.out.println("\n=== AGENDAMENTO DE EXAMES ===");
+                System.out.println("[1] Eletrocardiograma");
+                System.out.println("[2] Hemograma");
+                System.out.println("[3] Raio X");
+                System.out.println("[4] Teste Ergométrico");
+                System.out.println("[5] Ultrassonografia");
+                System.out.println("Escolha qual exame você quer agendar: ");
+                int opcaoExame = input.nextInt();
+
+                switch (opcaoExame) {
+                    case 1:
+                        System.out.println("✅ O seu exame Eletrocardiograma foi marcado.");
+                        break;
+                    case 2:
+                        System.out.println("✅ O seu exame de Hemograma foi marcado.");
+                        break;
+                    case 3:
+                        System.out.println("✅ O seu exame de Raio X foi marcado.");
+                        break;
+                    case 4:
+                        System.out.println("✅ O seu exame Ergométrico foi marcado.");
+                        break;
+                    case 5:
+                        System.out.println("✅ O seu exame de Ultrassonografia foi marcado.");
+                    default:
+                        System.out.println("❌ Exame não encontrado, escolha uma das opções acima.");
+                }
+            } else {
+                System.out.println("❌ Opção inválida, escolha uma das opções acima.");
+            }
+
+        } else if (opcaoMenu == 2) {
+            System.out.println("\n=== MENU RESULTADOS ===");
+            System.out.println("[1] Download arquivo");
+            System.out.println("[2] Enviar por email");
+            System.out.println("Digite uma opção: ");
+            int opcaoResultado = input.nextInt();
+
+            switch (opcaoResultado) {
+                case 1:
+                    System.out.println("\n⏳ Aguarde um momento, enquanto carregamos o seu arquivo...");
+                    break;
+                case 2:
+                    System.out.println("\n✉️ Resultado enviado para o email cadastrado.");
+                    break;
+                default:
+                    System.out.println("\n❌ Opção inválida, escolha uma das opções acima.");
+            }
+
+        } else if (opcaoMenu == 3){
+            System.out.println("\nAtendimento encerrado.");
+        } else {
+            System.out.println("\n❌ Opção inválida, escolha uma das opções acima.");
         }
-
     }
-
 }

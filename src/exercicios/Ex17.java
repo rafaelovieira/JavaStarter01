@@ -2,51 +2,49 @@ package exercicios;
 
 import java.util.Scanner;
 
-public class Ex17 {
+public class ex17 {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        /*
-        Faça um programa que faça o cadastro de um usuário (nome, usuario, login, senha)
-        e depois ele possa fazer login com usuario cadastrado.
-        */
+        String nomeCadastro = "";
+        String usuarioCadastro = "";
+        String senhaCadastro = "";
+        boolean cadastro = false;
 
-        Scanner sc = new Scanner(System.in);
+        System.out.println("\n=== CADASTRO DE USUÁRIOS ===");
+        System.out.println("Digite seu nome completo: ");
+        nomeCadastro = input.nextLine();
 
-        String nomeCadastrado = "";
-        String usuarioCadastrado = "";
-        String senhaCadastrada = "";
-        boolean cadastrado = false;
+        System.out.println("Crie um nome de usuário: ");
+        usuarioCadastro = input.nextLine();
 
-        System.out.println("===== SISTEMA DE CADASTRO E LOGIN =====");
+        System.out.println("Crie uma senha: ");
+        senhaCadastro = input.nextLine();
 
-        // Cadastro de usuário
-        System.out.println("\n=== CADASTRO DE USUÁRIO ===");
-        System.out.print("Digite o nome completo: ");
-        nomeCadastrado = sc.nextLine();
+        if (nomeCadastro.trim().isEmpty() || usuarioCadastro.trim().isEmpty()) {
+            System.out.println("❌ Os campos não podem ficar vazios, favor preencher corretamente!");
+            cadastro = false;
+        } else if (senhaCadastro.length() <6) {
+            System.out.println("❌ Sua senha tem que ter no mínimo 6 dígitos, tente novamente!");
+            cadastro = false;
+        } else {
+            System.out.println("\n✅ O usuário foi cadastrado com sucesso! Faça o login para prosseguir.\n");
+            cadastro = true;
+        }
 
-        System.out.print("Crie um nome de usuário: ");
-        usuarioCadastrado = sc.nextLine();
+        if (cadastro) {
+            System.out.println("=== LOGIN USUÁRIO ===");
 
-        System.out.print("Crie uma senha: ");
-        senhaCadastrada = sc.nextLine();
+            System.out.println("Usuário: ");
+            String usuarioLogin = input.nextLine();
 
-        cadastrado = true;
-        System.out.println("\nUsuário cadastrado com sucesso!\n");
+            System.out.println("Senha: ");
+            String senhaLogin = input.nextLine();
 
-        // Login do usuário
-        if (cadastrado) {
-            System.out.println("=== LOGIN ===");
-
-            System.out.print("Usuário: ");
-            String usuarioLogin = sc.nextLine();
-
-            System.out.print("Senha: ");
-            String senhaLogin = sc.nextLine();
-
-            if (usuarioLogin.equals(usuarioCadastrado) && senhaLogin.equals(senhaCadastrada)) {
-                System.out.println("\nLogin realizado com sucesso! Bem-vindo(a), " + nomeCadastrado + "!");
+            if (usuarioLogin.equals(usuarioCadastro) && senhaLogin.equals(senhaCadastro)) {
+                System.out.println("\n🔓 Login realizado com sucesso. Seja bem-vindo " + nomeCadastro + "!");
             } else {
-                System.out.println("\nUsuário ou senha incorretos. Tente novamente.");
+                System.out.println("\n🔒 Usuário ou senha incorreta, tente novemante!");
             }
         }
     }

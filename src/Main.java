@@ -1,18 +1,36 @@
-import java.util.Scanner;
+
+import padaria.Bolo;
+import padaria.MaquinaDeBolo;
+import sorvete.MaquinaDeSorvete;
+import sorvete.Sorvete;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        int opcao = 1;
-        if (opcao == 1){
-            System.out.println("Iniciar jogo");
-        }else if(opcao == 2){
-            System.out.println("Caregar jogo");
-        }else if(opcao == 3){
-            System.out.println("Sair");
-        } else {
-            System.out.println("Opção inválida");
-        }
+        MaquinaDeSorvete maquinaDeSorvete = new MaquinaDeSorvete();
+        Sorvete sorveteChocolate = maquinaDeSorvete.fabricarSorvete("Chocolate", 10, 9.5, "Nestle", true);
+        sorveteChocolate.exibirSorvete();
+
+
+
+
+//        MaquinaDeBolo maquinaDeBolo = new MaquinaDeBolo();
+//        Bolo bolo = maquinaDeBolo.fabricarBolo(10, "Chocolate", 10.0, "Redondo");
+//        bolo.exibirDetalhes();
+
+
+
+//        int opcao = 1;
+//        if (opcao == 1){
+//            System.out.println("Iniciar jogo");
+//        }else if(opcao == 2){
+//            System.out.println("Caregar jogo");
+//        }else if(opcao == 3){
+//            System.out.println("Sair");
+//        } else {
+//            System.out.println("Opção inválida");
+//        }
 
 //        Scanner input = new Scanner(System.in);
 //        System.out.println("Digite seu usuario");

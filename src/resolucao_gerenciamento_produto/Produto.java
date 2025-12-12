@@ -1,4 +1,4 @@
-package gerenciamento_produto;
+package resolucao_gerenciamento_produto;
 
 public class Produto {
     private String nome;

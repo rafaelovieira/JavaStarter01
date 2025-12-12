@@ -1,4 +1,4 @@
-package gerenciamento_produto;
+package resolucao_gerenciamento_produto;
 
 public class Loja {
     public static void main(String[] args) {
